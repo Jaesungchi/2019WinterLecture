@@ -115,8 +115,8 @@ public class NotePadFrame extends JFrame {
 	}
 	
 	private void setTextArea() {
-		txt_Area = new JTextArea(35,60);
-		add(new JScrollPane(txt_Area),BorderLayout.NORTH);
+		txt_Area = new JTextArea();
+		add(new JScrollPane(txt_Area),BorderLayout.CENTER);
 	}
 	
 	public void setFontSize(int size) {
