@@ -15,4 +15,7 @@
 3. NotePad
 
    Frame에 각종 Toolbar 및 Menu를 붙여 실제 메모장 프로그램 구현.
+   
+4. Contact
 
+   Txt파일을 이용해 연락처 관리 프로그램을 제작
