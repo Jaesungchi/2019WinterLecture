@@ -38,11 +38,12 @@ use school;
 /*Create Table 테이블 이름()*/
 /*컬럼이름 데이터형 옵션*/
 CREATE TABLE MEMBER(
-	id Int NOT NULL Primary Key,
+	id Int NOT NULL AUTO_INCREMENT,
     username VARCHAR(20), /*20글자 까지 가능*/
     dept VARCHAR(7),
-    birth DATE
-);
+    birth DATE,
+    PRIMARY KEY(id)
+)ENGINE = InnoDB;
 /*Drop TABLE 테이블 이름*/
 DROP TABLE MEMBER;
 /*INSERT INTO 테이블 이름(삽입할 컬럼 이름...) VALUES(컬럼에 넣을 값)*/
