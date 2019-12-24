@@ -59,7 +59,7 @@ public class ProductDAO {
     public ArrayList<ProductDTO> selectData(){
         try {
             ArrayList<ProductDTO> arr = new ArrayList<ProductDTO>();
-            quary = Constants.SELECTQUARY;
+            quary = Constants.ALLGETQUARY;
             pstm = conn.prepareStatement(quary);
 
             ResultSet sucess = pstm.executeQuery();
@@ -122,7 +122,7 @@ public class ProductDAO {
     public Vector<String> getItems(){
         Vector<String> arr = new Vector<String>();
         try {
-            quary = Constants.SELECTQUARY;
+            quary = Constants.ALLGETQUARY;
             pstm = conn.prepareStatement(quary);
 
             ResultSet sucess = pstm.executeQuery();

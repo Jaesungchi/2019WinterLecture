@@ -29,6 +29,7 @@ public class ProductView extends JFrame {
         setTitle("상품관리 프로그램");
         setSize(700,400);
         setLayout(null);
+        setResizable(false); //사이조 조정 안되게 함.
     }
 
     private void setMessegeBox(){
@@ -91,7 +92,7 @@ public class ProductView extends JFrame {
     }
 
     private void setTextArea(){
-        textArea = new TextArea();
+        textArea = new TextArea(10,20);
         textArea.setFont(new Font("고딕",Font.PLAIN,12));
         textArea.setEnabled(false);
         JScrollPane jScrollPane = new JScrollPane(textArea);
@@ -128,7 +129,11 @@ public class ProductView extends JFrame {
 
     public void resetComboBox(DefaultComboBoxModel DCBM){
         prcodeBox.setModel(DCBM);
-        prcodeBox.insertItemAt("전체",0);
+        prcodeBox.insertItemAt(Constants.ALL,0);
+        prcodeBox.setSelectedItem(Constants.ALL);
+        prmanufactureBox.setText("");
+        prpriceBox.setText("");
+        prnameBox.setText("");
     }
 
     //TextArea에 한줄씩 추가하는 메소드
@@ -152,7 +157,7 @@ public class ProductView extends JFrame {
         temps.setManufacture(prmanufactureBox.getText());
         temps.setPrname(prnameBox.getText());
         temps.setPrice(Integer.parseInt(prpriceBox.getText()));
-        if(!prcodeBox.getSelectedItem().equals("전체"))
+        if(!prcodeBox.getSelectedItem().equals(Constants.ALL))
             temps.setPrcode(Integer.parseInt(String.valueOf(prcodeBox.getSelectedItem())));
         else
             temps.setPrcode(0);
@@ -164,5 +169,13 @@ public class ProductView extends JFrame {
         prnameBox.setText(product.getPrname());
         prpriceBox.setText(String.valueOf(product.getPrice()));
         prmanufactureBox.setText(product.getManufacture());
+    }
+
+    //항목에 빈곳이 있는지 확인하는 메소드
+    public boolean checkNotNullData(){
+        if(prnameBox.getText() == null) return false;
+        if(prmanufactureBox.getText() == null) return false;
+        if(prpriceBox.getText() == null) return false;
+        return true;
     }
 }

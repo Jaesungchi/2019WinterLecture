@@ -2,7 +2,12 @@
 
 ![imge](https://img.shields.io/badge/ProjectType-Lecture-green)  ![imge](https://img.shields.io/badge/Language-Java-yellow)  ![imge](https://img.shields.io/badge/Tools-IntelliJ-blue)
 
-![imge](https://img.shields.io/badge/Language-SQL-orange)![imge](https://img.shields.io/badge/Tools-MySQL-blue)
+![imge](https://img.shields.io/badge/Language-SQL-orange) ![imge](https://img.shields.io/badge/Tools-MySQL-blue)
+
+2019 - 12 - 24 (Merry Christmas! ) :christmas_tree:
+
+1. DatabaseTest : 간단한 DataBase 연동 프로젝트.
+2.  ProductManager : Database를 연동한 상품관리 프로젝트.
 
 ### 데이터베이스:books:
 
