@@ -104,29 +104,40 @@ DESC MEMBER;
      PreparedStatement pstmt = conn.prepareStatement("insert into test values(?,?)");
      pstmt.setString(1, getUsername());
      pstmt.setString(2, getEmail());
-     pstmt.executeUpdate();
      ```
-
+   
 4. SQL문 전송
 
    - java.sql.Statement
 
-     - executeQuery()
+     - executeQuery() : Select등 정보를 받을 것이 있을 때
 
-     - executeUpdate()
+     - executeUpdate() : 삽입, 수정,삭제 할 때
 
        ```java
-       int count = pstmt.executeUpdate();
        pstmt.executeUpdate();
        ```
-
+   
 5. 결과 받기
 
    - java.sql.ResultSet
 
+     ```java
+     ResultSet rs = pstmt.executeQuery();
+     while(rs.next()) { //데이터가 있는 만큼 받는다.
+     	String name = rs.getString(1); //1번 행의 정보를 가져온다.
+     	System.out.println(name);
+     }
+     ```
+
 6. 연결 해제
 
    - java.sql.Connection -> close()
+
+### 만약 에러가 뜬다면?
+
+- TimeZone 에러가 뜬다면 Connection 쿼리 뒤에 &serverTimezone=UTC 를추가한다.
+- Encoding 에러가 뜬다면 Connection 쿼리 뒤에 &characterEncoding = UTF-8을 추가한다.
 
 ---
 
