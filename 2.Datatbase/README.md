@@ -41,7 +41,7 @@ CREATE TABLE MEMBER(
 	id Int NOT NULL Primary Key,
     username VARCHAR(20), /*20글자 까지 가능*/
     dept VARCHAR(7),
-    birth DATE,
+    birth DATE
 );
 /*Drop TABLE 테이블 이름*/
 DROP TABLE MEMBER;
@@ -91,7 +91,7 @@ DESC MEMBER;
    - java.sql.Connection;
 
      ```java
-     Connection conn = DrivaerManager.getConnection(JDBC_URL,"아이디","비밀번호")
+     Connection conn = DriverManager.getConnection("jdbc:mysql://" + server + "/" + database + "?useSSL=false", user_name, password);
      ```
 
 3. Statement 생성
@@ -127,6 +127,22 @@ DESC MEMBER;
 6. 연결 해제
 
    - java.sql.Connection -> close()
+
+---
+
+### IntelliJ 에서 MySQL 사용법
+
+1. JDBC 설치
+
+   [MySQL사이트](https://dev.mysql.com/downloads/connector/j/) 에 들어가서 "Looking for Previous GA versions?" 를 누른다.
+
+   다음 **Platform Independent (Architecture Independent), Compressed TAR Archive**를 다운 받는다.
+
+   압축 파일에서 **mysql-connector-java-5.1.47-bin.jar** 파일만 압축을 풀어준다.(버전이 다를 수 있음)
+
+2. IntelliJ 연결
+
+   Project Structure에 들어가 Library 항목에 추가한다.
 
 ---
 
