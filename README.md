@@ -16,9 +16,12 @@ MVC 패턴을 적용할 예정이며, 개발자 코스로 진행될 예정.(심�
 
 수업기간 : 2019 - 12 - 23 ~ 2020 - 01 - 03
 
-1. Java I/O & GUI
+1. Java I/O & GUI (2019 - 12 - 23)
    - SimpleI/O Program
    - EventExam Program
    - NotePad
    - Contact
-2. DatabaseProgramming
+2. DatabaseProgramming (2019 - 12 - 24) :christmas_tree:
+   - DataBaseTest Program
+   - Product Manager Program
+3. Advanced JAVA(2019 - 12- 26)
