@@ -4,7 +4,7 @@
 
 ![imge](https://img.shields.io/badge/Language-SQL-orange) ![imge](https://img.shields.io/badge/Tools-MySQL-blue)
 
-2019 - 12 - 26
+2019 - 12 - 26 ~ 27
 
 ## Thread :arrow_right:
 
@@ -269,4 +269,69 @@ public class DaemonExample extends Thread{
 	}
 }
 ```
+
+## Collection Framework
+
+### 소개
+
+- 사전적 의미로는 요소를 수집해 저장하는 것
+- 객체들을 효율적으로 추가,삭제,검색 할 수 있도록 제공되는 컬렉션 라이브러리
+
+### List Collection
+
+- 인덱스로 관리, 중복해서 객체 저장 가능
+
+- ArrayList, Vector, LinkedList
+
+  - ArraypList 와 Vector의 차이점
+
+    Vector는 Thread 동기화를 함. 복수개의 Thread가 동시에 Vector에 접근해 객체를 추가, 삭제를 하더라도 Thread 가 안전함.
+
+### Set Collection
+
+- 수학의 집합에 비유, 순서없음, 객체 중복저장 불가, 하나의 null만 가능
+- HashSet, LinkedHashSet, TreeSet
+
+### Map Collection
+
+- 키의 값을 String 타입으로 제한한 Map Collection
+
+### Synchronized Collection
+
+- 비 동기화된 Collection을 동기화된 Collection으로 래핑
+- 단점
+  - 하나의 Thread가 요소를 처리할 때 전체 잠금 발생
+- ConcurrentHashMap
+  - 부분 잠금 사용, 처리하는 요소가 포함된 부분만 잠금
+- ConcurrentLinkedQueue
+  - Lock-Free 알고리즘을 구현한 Collection
+  - 잠금을 사용하지 않음
+  - 여러 개의 Thread가 동시에 접근해도 최소한 하나의 Thread가 성공하도록 처리
+
+## 네트워크 프로그래밍
+
+### 개요
+
+- 컴퓨터와 컴퓨터를 연결한 망형 조직으로, 기업 내 컴퓨터들을 연결한 랜(LAN)에서 부터 전 세계를 하나로 연결한 인터넷까지 모두 네트워크 이다.
+
+- TCP/IP 통신 프로토콜을 사용하는 컴퓨터 네트워크가 일반적
+
+  ![image](https://user-images.githubusercontent.com/37828448/71502160-d967c380-28b1-11ea-9db0-fdca7916bb2b.png)
+
+- 포트
+
+  포트는 서버에서 자신의 컴퓨터에 접속하는 입구를 구분하는 데 사용하는 번호
+
+- 소켓
+
+  소켓은 TCP/IP 네트워크에서 클라이언트와 서버를 연결하는 통로
+
+- HTTP
+
+  - HTTP는 Hyper Text Transfer Protocol의 약어로, 웹의 통신 프로토콜이다
+  - 웹 브라우저와 웹 서버가 통신하는 데 필요한 메세지 규격
+
+- 메세지
+
+  메세지는 네트워크가 프로그램에서 클라이언트와 서버가 주고받는 일련의 데이터
 

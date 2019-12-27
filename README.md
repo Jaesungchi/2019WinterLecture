@@ -24,4 +24,5 @@ MVC 패턴을 적용할 예정이며, 개발자 코스로 진행될 예정.(심�
 2. DatabaseProgramming (2019 - 12 - 24) :christmas_tree:
    - DataBaseTest Program
    - Product Manager Program
-3. Advanced JAVA(2019 - 12- 26)
+3. Advanced JAVA(2019 - 12- 26,27)
+   - TestClient
