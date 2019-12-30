@@ -2,6 +2,8 @@
 
 ![imge](https://img.shields.io/badge/ProjectType-Lecture-green)  ![imge](https://img.shields.io/badge/Language-Java-yellow)  ![imge](https://img.shields.io/badge/Tools-Eclipse-blue)
 
+![gifcapture](https://user-images.githubusercontent.com/37828448/71567309-5c328d80-2b01-11ea-9ea0-38cfe6959c1a.gif)
+
 ## 주요 기술 요소 :computer:
 
 ### 객체지향의 개념 적용 :egg:

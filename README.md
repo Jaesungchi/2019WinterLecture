@@ -16,14 +16,14 @@ MVC 패턴을 적용할 예정이며, 개발자 코스로 진행될 예정.(심�
 
 수업기간 : 2019 - 12 - 23 ~ 2020 - 01 - 03
 
-1. Java I/O & GUI (2019 - 12 - 23)
+1. [Java I/O & GUI (2019 - 12 - 23)](https://github.com/Jaesungchi/2019WinterLecture/tree/master/1.Java_I_O_%26_GUI)
    - SimpleI/O Program
    - EventExam Program
    - NotePad
    - Contact
-2. DatabaseProgramming (2019 - 12 - 24) :christmas_tree:
+2. [DatabaseProgramming (2019 - 12 - 24) :christmas_tree:](https://github.com/Jaesungchi/2019WinterLecture/tree/master/2.Datatbase)
    - DataBaseTest Program
    - Product Manager Program
-3. Advanced JAVA(2019 - 12- 26,27)
+3. [Advanced JAVA(2019 - 12- 26,27)](https://github.com/Jaesungchi/2019WinterLecture/tree/master/3.AdvancedJava)
    - TestClient
-4. Multi Chatting Program(2019 - 12- 27)
+4. [Multi Chatting Program(2019 - 12- 27)](https://github.com/Jaesungchi/2019WinterLecture/tree/master/4.MultiChattingProgram)

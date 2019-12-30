@@ -34,6 +34,8 @@ public class MultiChatUI extends JFrame implements Runnable {
     //채팅 내용 출력 창
     protected  JTextArea msgOut;
 
+    protected String id;
+
     //생성자
     public MultiChatUI(){
         //메인 프레임 구성
