@@ -6,7 +6,7 @@ public class MultiChatUI extends JFrame implements Runnable {
     //로그인 패널
     private JPanel loginPanel;
     //로그인 버튼
-    protected  JButton logintButton;
+    protected  JButton loginButton;
 
     //대화명 라벨
     private JLabel inLabel;
@@ -50,12 +50,12 @@ public class MultiChatUI extends JFrame implements Runnable {
         loginPanel.setLayout(new BorderLayout());
         //로그인 입력필드/버튼 생성
         idInput = new JTextField(15);
-        logintButton = new JButton("로그인");
+        loginButton = new JButton("로그인");
         //로그인 패널에 위젯 구성
         inLabel = new JLabel("대화명 ");
         loginPanel.add(inLabel,BorderLayout.WEST);
         loginPanel.add(idInput,BorderLayout.CENTER);
-        loginPanel.add(logintButton,BorderLayout.EAST);
+        loginPanel.add(loginButton,BorderLayout.EAST);
         //로그아웃 패널 구성
         logoutPanel = new JPanel();
         //로그아웃 패널 레이아웃 구성
@@ -83,8 +83,8 @@ public class MultiChatUI extends JFrame implements Runnable {
         tab = new JPanel();
         cardLayout = new CardLayout();
         tab.setLayout(cardLayout);
-        tab.add(loginPanel,"login");
-        tab.add(logoutPanel,"logout");
+        tab.add(loginPanel,Constants.LOGIN_TXT);
+        tab.add(logoutPanel,Constants.LOGOUT_TXT);
         add(tab,BorderLayout.NORTH);
 
         //메세지 출력 영역 초기화
@@ -103,7 +103,7 @@ public class MultiChatUI extends JFrame implements Runnable {
     public void addButtonActionListener(ActionListener listener){
         //이벤트 리스너 등록
         logoutButton.addActionListener(listener);
-        logintButton.addActionListener(listener);
+        loginButton.addActionListener(listener);
         exitButton.addActionListener(listener);
         msgInput.addActionListener(listener);
     }

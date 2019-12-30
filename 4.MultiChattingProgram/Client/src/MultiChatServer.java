@@ -47,7 +47,7 @@ public class MultiChatServer {
         }
     }
     class ChatThread extends Thread{
-        public Messege m;
+        public Message m;
         boolean status;
         Gson gson;
         String msg;
@@ -56,7 +56,7 @@ public class MultiChatServer {
         PrintWriter outMsg;
 
         public ChatThread(){
-            m = new Messege();
+            m = new Message();
             status = false;
             gson = new Gson();
 
@@ -82,15 +82,15 @@ public class MultiChatServer {
                     e.printStackTrace();
                     System.exit(0);
                 }
-                m = gson.fromJson(msg,Messege.class);
-                if(m.getType().equals("logout")){
+                m = gson.fromJson(msg, Message.class);
+                if(m.getType().equals(Constants.LOGOUT_TXT)){
                     chatThreads.remove(this);
-                    msgSendAll(gson.toJson(new Messege(m.getId(),"","님이 종료했습니다.","server")));
+                    msgSendAll(gson.toJson(new Message(m.getId(),"","님이 종료했습니다.",Constants.SERVER_TXT)));
                     //해당 클라이언트 스레드종료로 status를 false로 설정
                     status = false;
-                } else if (m.getType().equals("login")){
-                    msgSendAll(gson.toJson(new Messege(m.getId(),"","님이 로그인 했습니다","server")));
-                } else if (m.getType().equals("googling")) {
+                } else if (m.getType().equals(Constants.LOGIN_TXT)){
+                    msgSendAll(gson.toJson(new Message(m.getId(),"","님이 로그인 했습니다",Constants.SERVER_TXT)));
+                } else if (m.getType().equals(Constants.WHISPER_TXT)) {
                     msgWhisper(m.getMsg(),m.getGoogling(),m.getId());
                 } else {
                     msgSendAll(msg);
@@ -103,10 +103,10 @@ public class MultiChatServer {
         void msgWhisper(String msg, String who, String sender){
             for(ChatThread ct :chatThreads){
                 if(ct.m.getId().equals(who)){
-                    ct.outMsg.println(gson.toJson(new Messege(m.getId()+"님의 귓속말","",msg,"googling",who)));
+                    ct.outMsg.println(gson.toJson(new Message(m.getId()+"님의 귓속말","",msg,Constants.WHISPER_TXT,who)));
                 }
                 if(ct.m.getId().equals(sender)) {
-                	ct.outMsg.println(gson.toJson(new Messege(who+"에게 귓속말","",msg,"msg")));
+                	ct.outMsg.println(gson.toJson(new Message(who+"에게 귓속말","",msg,Constants.MESSAGE_TXT)));
                 }
             }
         }

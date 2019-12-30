@@ -1,22 +1,22 @@
-public class Messege {
+public class Message {
     private String id;
     private String passwd;
     private String msg;
     private String type;
     private String googling;
 
-    public Messege(){
+    public Message(){
 
     }
 
-    public Messege(String id, String passwd, String msg, String type){
+    public Message(String id, String passwd, String msg, String type){
         this.id = id;
         this.passwd = passwd;
         this.msg = msg;
         this.type = type;
     }
 
-    public Messege(String id, String passwd, String msg, String type,String googling){
+    public Message(String id, String passwd, String msg, String type, String googling){
         this.id = id;
         this.passwd = passwd;
         this.msg = msg;
